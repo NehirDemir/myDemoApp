@@ -23,6 +23,18 @@ public class App
         }
         return false;
       }
+      public static boolean searchWord(ArrayList<String> arr,String word1,String word2)
+      {
+         String kelime1="",kelime2="";
+         kelime1 = word1 + word2;
+         kelime2= word2 + word1 ;
+         for(int i=0;i<arr.size;i++){     
+         if(arr.get(i).equalsIgnoreCase(word1) || arr.get(i).equalsIgnoreCase(word2))
+            return true;
+
+       }
+      return false;
+      }
 
   
 }

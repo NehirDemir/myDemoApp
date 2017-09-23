@@ -7,6 +7,8 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
+
+import java.util.*;
 public class AppTest 
     extends TestCase
 {
@@ -20,22 +22,22 @@ public class AppTest
         super( testName );
     }
     public void testFound() {
-      ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-      assertTrue(new App().search(array, 4));
+      ArrayList<String> array = new ArrayList<>(Arrays.asList("a","b","b","a"));
+      assertTrue(new App().searchWord(array, "b","a"));
     }
 
     public void testNotFound() {
-      ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-      assertFalse(new App().search(array, 5));
+      ArrayList<String> array = new ArrayList<>(Arrays.asList("a","b","w","s"));
+      assertFalse(new App().searchWord(array,"c", "d"));
     }
 
     public void testEmptyArray() {
-      ArrayList<Integer> array = new ArrayList<>();
-      assertFalse(new App().search(array, 1));
+      ArrayList<String> array = new ArrayList<>();
+      assertFalse(new App().searchWord(array, " "," " ));
     }
 
     public void testNull() {
-      assertFalse(new App().search(null, 1));
+      assertFalse(new App().searchWord(null, "",""));
     }
 
     /**
