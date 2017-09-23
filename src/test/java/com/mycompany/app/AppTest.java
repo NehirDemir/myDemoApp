@@ -37,7 +37,7 @@ public class AppTest
     }
 
     public void testNull() {
-      assertFalse(new App().searchWord(null, "",""));
+      assertFalse(new App().searchWord(null,"nehir","nehir"));
     }
 
     /**
